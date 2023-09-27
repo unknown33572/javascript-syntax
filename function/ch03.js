@@ -21,3 +21,13 @@ console.log(rest);
 console.log(rest.age);
 
 console.log(rest.adress.postalCode);
+
+const numbers = () => [10, 20, 30, 40, 50];
+
+let scores = numbers();
+
+let x = scores[0];
+let y = scores[1];
+let z = scores[2];
+
+console.log(x, y, z);
