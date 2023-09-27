@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button" onclick="this.style.backgroundColor='red'">클릭</button>
+  <button type="button" onclick="callFunc(this);">클릭</button>
+  <select onchange="changeSelect(this);"> <!--onchange는 select에서만 사용 가능-->
+    <option value="1">해당 옵션 value가 콘솔에 나옴</option>
+    <option value="2">해당 옵션 value가 콘솔에 나옴</option>
+    <option value="3">해당 옵션 value가 콘솔에 나옴</option>
+  </select>
+  <script>
+    function callFunc(obj) {
+      console.log(obj);
+    }
+
+    function changeSelect(obj) {
+      console.log(obj.value);
+    }
+
+  </script>
+</body>
+</html>

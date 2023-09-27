@@ -1,38 +1,23 @@
-function sum(x, y) {
-    return x + y;
+function sayHello(name) { // 함수 선언식
+  return 'Hello ' + name;
 }
 
-function subtract(x, y) {
-    return x - y;
+const sayGoodbye = function goodbye(name) { // 함수 표현식
+  return 'Goodbye ' + name;
 }
 
-function multiply(x, y) {
-    return x * y;
+const sayGoodmorning = (name) => {
+  return 'Goodmorning ' + name;
 }
 
-function divide(x, y) {
-    if (y == 0) {
-        return "Divide by zero error";
-    }
-    return x / y;
-}
+const sayAfternoon = name => {
+  return 'Afternoon ' + name}
+;
 
-function calculator(x, y, operator) { // 함수를 인자로 받을 수 있음
-    return operator(x, y);
-}
+const sayEvening = name => `Evening ${name}`;
 
-let secondCalculator = function (x, y, operator) {
-    return operator(x, y);
-}
-
-let thirdCalculator = new Function('x', 'y', 'operator', 'return operator(x, y)');
-
-console.log(calculator(2, 4, sum));
-console.log(calculator(2, 4, subtract));
-console.log(calculator(2, 4, multiply));
-console.log(calculator(2, 4, divide));
-console.log(calculator(2, 0, divide));
-
-console.log(secondCalculator(3, 4, sum));
-
-console.log(thirdCalculator(4, 5, sum));
+console.log(sayHello('홍길동'));
+console.log(sayGoodbye('홍길동'));
+console.log(sayGoodmorning('홍길동'));
+console.log(sayAfternoon('홍길동'));
+console.log(sayEvening('홍길동'));
