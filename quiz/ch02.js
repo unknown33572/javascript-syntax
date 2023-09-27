@@ -48,7 +48,7 @@ let product = [
   }
 ];
 
-let selectedProductPrice = product[3].price; // 선택한 상품의 가격
+let selectedProductPrice = product[2].price; // 선택한 상품의 가격
 
 while (selectedProductPrice > 0) {
   for (let i = 0; i < coinUnit.length; i++) {
@@ -60,5 +60,5 @@ while (selectedProductPrice > 0) {
   }
 }
 
-console.log("해당 상품 " + `${product[3].name}` + "을 구매하시면 " + "500원 "+ coinCount[0] + "개" + " 100원 " + coinCount[1] + "개" + 
+console.log("해당 상품 " + `${product[2].name}` + "을(를) 구매하시면 " + "500원 "+ coinCount[0] + "개" + " 100원 " + coinCount[1] + "개" + 
 " 50원 "+ coinCount[2] + "개" + " 10원 " + coinCount[3] + "개의 동전이 필요합니다.");

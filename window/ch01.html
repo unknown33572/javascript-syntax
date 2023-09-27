@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="name">
+  </div>
+  <script>
+    // alert("Hello World"); // 알림창
+    // if(confirm("Are you sure?")) { // 확인창
+    //   alert("Yes");
+    // } else {
+    //   alert("No");
+    // }
+    let name = prompt("What is your name?"); // 입력창
+
+    if(name == null) {
+      alert("You have not entered your name");
+    } else {
+      document.getElementById("name").innerHTML = "Hello " + name;
+    }
+  </script>
+</body>
+</html>

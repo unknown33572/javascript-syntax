@@ -75,4 +75,4 @@ function rpsGameTwo(userChoice) {
 
 console.log(rpsGame("rock"));
 
-console.log(rpsGameTwo("rock"));
+// console.log(rpsGameTwo("scissors"));
