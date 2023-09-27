@@ -34,4 +34,46 @@ console.log(combine.sort()); // 배열을 정렬. ( 기본적으로 오름차순
 const numbers = [2, 3, 5, 4, 1];
 
 console.log(numbers.sort()); // 숫자를 오름차순 정렬.
-console.log(numbers.sort(function(x,y){return y-x})); // 숫자를 내림차순 정렬.
+console.log(
+  numbers.sort(function (x, y) {
+    return y - x;
+  })
+); // 숫자를 내림차순 정렬.
+
+const points = [40, 100, 1, 5, 2, 25, 10];
+
+console.log(
+  points.filter(function (point) {
+    return point >= 30;
+  })
+); // 배열의 요소 중에서 특정 조건을 만족하는 요소만 추출하여 새로운 배열을 반환.
+
+let userList = [
+  {
+    name: "Mike",
+    age: 30,
+    email: "mikey@gmail.com",
+  },
+  {
+    name: "Tom",
+    age: 20,
+    email: "tommy@yahoo.com",
+  },
+  {
+    name: "Jane",
+    age: 25,
+    email: "jane@naver.com",
+  },
+];
+
+let userEmailList = userList.map(function (user) {
+  return user.email;
+});
+
+console.log(userEmailList); // 배열의 요소를 변환하여 새로운 배열을 반환.
+
+let sumPoint = points.reduce(function (total, currentValue) {
+  return total + currentValue;
+}, 0);
+
+console.log(sumPoint); // 배열의 모든 요소를 누적하여 반환.
