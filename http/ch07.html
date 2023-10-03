@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="fileInput">파일선택</label>
+  <input type="file" id="fileInput">
+  <button id="uploadButton">업로드</button>
+  <div id="result"></div>
+  <script>
+    let fileInput = document.getElementById('fileInput');
+    let uploadButton = document.getElementById('uploadButton');
+    let result = document.getElementById('result');
+
+    uploadButton.addEventListener('click', () => {
+      let formData = new FormData();
+      formData.append('username', 'abc123');
+      formData.append('attachment', fileInput.files[0]);
+      fetch('url', {
+        method: 'POST',
+        body: formData
+      }).then((res) => res.json())
+        .catch((err) => console.error(err))
+        .then((res) => console.log(JSON.stringify(res)));
+    });
+  </script>
+</body>
+</html>
