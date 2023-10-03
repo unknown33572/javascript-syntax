@@ -7,7 +7,7 @@
 </head>
 <body>
   <script>
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://jsonplaceholder.typicode.com/posts') // GET 요청 fetch는 Promise를 반환 get 요청은 body를 보낼 필요가 없음
          .then((res) => res.json())
          .then((json) => console.log(json));
   </script>
